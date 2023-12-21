@@ -1,0 +1,6 @@
+public class MediumQuantityCashierFactory implements CashierFactory {
+    @Override
+    public Cashier createCashier() {
+        return new MediumQuantityCashierAdapter(new MediumQuantityCashier());
+    }
+}
