@@ -1,0 +1,11 @@
+public class CashierDistributor {
+    public static Cashier distributeCashier(int itemCount) {
+        if (itemCount <= 10) {
+            return new SmallQuantityCashierFactory().createCashier();
+        } else if (itemCount <= 24) {
+            return new MediumQuantityCashierFactory().createCashier();
+        } else {
+            return new BigQuantityCashierFactory().createCashier();
+        }
+    }
+}
