@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        PurchaseProcessingStrategy lightweightStrategy = new SmallQuantityStrategy();
+        PurchaseProcessingStrategy mediumWeightStrategy = new MediumQuantityStrategy();
+        PurchaseProcessingStrategy heavyWeightStrategy = new BigQuantityStrategy();
+        Cashier lightweightCashier = new CashierWithStrategy(lightweightStrategy);
+        Cashier mediumWeightCashier = new CashierWithStrategy(mediumWeightStrategy);
+        Cashier heavyWeightCashier = new CashierWithStrategy(heavyWeightStrategy);
+        lightweightCashier.processPurchase(5);
+        mediumWeightCashier.processPurchase(15);
+        heavyWeightCashier.processPurchase(30);
+    }
+}
