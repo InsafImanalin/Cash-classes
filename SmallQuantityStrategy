@@ -1,0 +1,6 @@
+public class SmallQuantityStrategy implements PurchaseProcessingStrategy {
+    @Override
+    public double calculateTotalCost(int itemCount) {
+        return itemCount * 5.0;
+    }
+}
