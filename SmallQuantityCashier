@@ -1,0 +1,6 @@
+public class SmallQuantityCashier implements Cashier {
+    @Override
+    public void processPurchase(int itemCount) {
+        System.out.println("Processing purchase with SmallQuantityCashier for " + itemCount + " items.");
+    }
+}
