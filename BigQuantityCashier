@@ -1,0 +1,6 @@
+public class BigQuantityCashier implements Cashier {
+    @Override
+    public void processPurchase(int itemCount) {
+        System.out.println("Processing purchase with BigQuantityCashier for " + itemCount + " items.");
+    }
+}
