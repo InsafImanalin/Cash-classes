@@ -1,0 +1,15 @@
+
+public class SmallQuantityCashierAdapter implements Cashier {
+    private SmallQuantityCashier cashier;
+
+    public SmallQuantityCashierAdapter(SmallQuantityCashier cashier) {
+        this.cashier = cashier;
+    }
+
+    @Override
+    public void processPurchase(int itemCount) {
+        cashier.processPurchase(itemCount);
+    }
+}
+
+
