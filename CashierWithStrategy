@@ -1,0 +1,13 @@
+public class CashierWithStrategy implements Cashier {
+    private PurchaseProcessingStrategy strategy;
+
+    public CashierWithStrategy(PurchaseProcessingStrategy strategy) {
+        this.strategy = strategy;
+    }
+
+    @Override
+    public void processPurchase(int itemCount) {
+        double totalCost = strategy.calculateTotalCost(itemCount);
+        System.out.println("Processing purchase for " + itemCount + " items. Total cost: $" + totalCost);
+    }
+}
