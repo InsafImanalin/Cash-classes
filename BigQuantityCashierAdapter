@@ -1,0 +1,16 @@
+
+
+public class BigQuantityCashierAdapter implements Cashier {
+    private BigQuantityCashier cashier;
+
+    public BigQuantityCashierAdapter(BigQuantityCashier cashier) {
+        this.cashier = cashier;
+    }
+
+    @Override
+    public void processPurchase(int itemCount) {
+        // Логика адаптера, если необходимо
+        cashier.processPurchase(itemCount);
+    }
+}
+
