@@ -1,0 +1,7 @@
+public class BigQuantityStrategy implements PurchaseProcessingStrategy {
+    @Override
+    public double calculateTotalCost(int itemCount) {
+        double originalPrice = itemCount * 5.0;
+        return originalPrice - (originalPrice * 0.15);
+    }
+}
