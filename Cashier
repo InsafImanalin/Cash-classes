@@ -1,0 +1,3 @@
+public interface Cashier {
+    void processPurchase(int itemCount);
+}
