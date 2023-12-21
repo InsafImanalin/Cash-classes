@@ -1,0 +1,14 @@
+
+
+public class MediumQuantityCashierAdapter implements Cashier {
+    private MediumQuantityCashier cashier;
+
+    public MediumQuantityCashierAdapter(MediumQuantityCashier cashier) {
+        this.cashier = cashier;
+    }
+
+    @Override
+    public void processPurchase(int itemCount) {
+        cashier.processPurchase(itemCount);
+    }
+}
